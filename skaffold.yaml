@@ -6,13 +6,13 @@ profiles:
       local:
         push: true # false는 로컬 테스트
       artifacts:
-        - image: skaqud/simple-api # on dev server
+        - image: oscka/simple-api # on dev server
         # - image: simple-api   # local
           jib:
             args:
               - -DskipTests
               - "-Djib.container.environment=SPRING_PROFILES_ACTIVE=dev"
-            fromImage: eclipse-temurin:17.0.4.1_1-jre-alpine
+            fromImage: eclipse-temurin:17.0.2_8-jre
     deploy:
       kubectl:
         manifests:
