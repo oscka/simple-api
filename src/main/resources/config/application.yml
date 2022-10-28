@@ -16,6 +16,8 @@ app-info:
     timestamp: '@app.build.timestamp@'
 
  
-  
+logging:
+  level:  
+    com.example: debug  
  
   

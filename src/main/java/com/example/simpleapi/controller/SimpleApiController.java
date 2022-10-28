@@ -16,11 +16,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class SimpleApiController {
 	@GetMapping("/hello")
-	public String hello() {
+	public String hello() throws Exception {
 		
 		log.info("==========simple-api home()");
+
+		throw new Exception("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 		
-		return "hello world";
+		// return "hello world";
 		
 	}
 	@GetMapping("/simple")
