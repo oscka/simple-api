@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.example.simpleapi.model.Simple;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,16 +16,16 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/api")
 @Slf4j
 public class SimpleApiController {
+	@Value("${echo.log.level}")
+	String echoLogLevel;
+
 	@GetMapping("/hello")
 	public String hello() throws Exception {
-		
-		log.info("==========simple-api home()");
-
-		throw new Exception("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-		
-		// return "hello world";
-		
+		log.info("==========simple-api home()");		
+		return "hello world :"+echoLogLevel;
 	}
+
+
 	@GetMapping("/simple")
 	public List<Simple> listSimple(){
 		List<Simple> list = new ArrayList<>();

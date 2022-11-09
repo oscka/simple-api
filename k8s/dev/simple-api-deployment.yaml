@@ -17,11 +17,17 @@ spec:
     spec:
       containers:
       - name: simple-api
-        image: skaqud/simple-api  # on server
+        image: oscka/simple-api  # on server
         # image: simple-api
         ports: 
         - name: http
           containerPort: 8080
+        env:
+          - name: DEBUG_LEVEL
+            valueFrom:
+              configMapKeyRef:
+                 name: config-dev
+                 key: DEBUG_INFO
 --- 
 apiVersion: v1
 kind: Service

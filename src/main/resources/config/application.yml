@@ -15,6 +15,7 @@ app-info:
     version: '@project.version@'
     timestamp: '@app.build.timestamp@'
 
+echo.log.level: ${DEBUG_LEVEL}
  
 logging:
   level:  
