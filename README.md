@@ -48,3 +48,7 @@ export KUBECONFIG=./kubeconfig
 direnv allow
 ```
 
+## test
+
+vscode에 httpyac 이라는 플러그인을 설치 한 뒤 request.http 파일을 열어
+테스트 주소가 맞는지 확인하고 각각의 요청을 테스트한다.
