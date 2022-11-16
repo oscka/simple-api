@@ -3,8 +3,14 @@ GET http://localhost:9320/api/hello
 
 GET http://localhost:9320/api/simple
 
-########### cluster ###########
-GET http://dev.simple-api.127.0.0.1.sslip.io/v1/simple
+########### private cluster ###########
+GET http://dev.simple-api.127.0.0.1.sslip.io/api/simple
 
 
-GET http://dev.simple-api.127.0.0.1.sslip.io:9701/v1/simple
+GET http://dev.simple-api.127.0.0.1.sslip.io:9701/api/simple
+
+
+
+########### ncp cluster ###########
+GET http://localhost:9320/api/hello
+Host: "test.osckorea.com"
