@@ -1,4 +1,5 @@
 ########### local ###########
+# 로컬에서 실행되는 포트 확인
 GET http://localhost:9320/api/hello
 
 GET http://localhost:9320/api/simple
@@ -6,10 +7,7 @@ GET http://localhost:9320/api/simple
 ########### private cluster ###########
 GET http://dev.simple-api.127.0.0.1.sslip.io/api/simple
 
-
 GET http://dev.simple-api.127.0.0.1.sslip.io:9701/api/simple
-
-
 
 ########### ncp cluster ###########
 GET http://localhost:9320/api/hello
